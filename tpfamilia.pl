@@ -9,6 +9,8 @@ madre(jacqueline,marge).
 madre(jacqueline,selma).
 madre(jacqueline,pati).
 
+madre(selma,lagarto).
+
 padre(abraham,homero).
 
 hermano(A,B):-
@@ -38,4 +40,8 @@ primo(A,C):-
  tio(X,C),
  hijo(A,X),
  hijo(C,Z).
-
+ 
+descendiente(A,A).
+descendiente(A,R):-
+ hijo(X,R),
+ descendiente(A,X).
