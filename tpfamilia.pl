@@ -20,7 +20,6 @@ hermano(A,B):-
  
 hijo(A,X):-
  padre(X,A).
-
 hijo(A,X):-
  madre(X,A).
  
@@ -44,4 +43,7 @@ primo(A,C):-
 descendiente(A,A).
 descendiente(A,R):-
  hijo(X,R),
+ descendiente(A,X).
+
+antecesor(X,A):-
  descendiente(A,X).
